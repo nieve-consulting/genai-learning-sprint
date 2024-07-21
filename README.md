@@ -90,6 +90,69 @@ Fine-tuning and evaluating large language models
 
 Building a RAG (Retrieval Augmented Generation) system.
 
+## Before You Arrive ✅
+
+> [!IMPORTANT]  
+> Complete the following steps **BEFORE** you come to the tutorial
+> 
+> - [ ] [Google Colab](https://colab.research.google.com) **Setup Account**
+> 
+>     <details closed><summary><code>Google Colab Instructions</code></summary>
+> 
+>     The Colab platform gives the user a virtual machine in which to run Python codes including machine
+>     learning codes.
+> 
+>     The VM comes with a preinstalled environment that includes most of what is needed
+>     for these tutorials.
+> 
+>     * You need a Google Account to use Colaboratory
+>     * Go to [Google's Colaboratory Platform](https://colab.research.google.com) and sign in with
+>       your Google account
+>     * Click on the `New Notebook` at the bottom
+>     * Now you will see a new notebook where you can type in python code.
+>     * After you enter code, type `<shift> + <enter>` to execute the code cell.
+>     * A full introduction to the notebook environment is out of scope for this tutorial, but many
+>       can be found with a [simple Google
+>       search](https://www.google.com/search?q=jupyter+notebook+tutorial)
+>     * We will be using notebooks from this repository during the tutorial, so  you should be
+>       familiar with how to import them into Colaboratory
+>     * Now you can open the `File` menu at the top left and select `Open Notebook` which will open a
+>       dialogue box.
+>     * Select the `GitHub` tab in the dialogue box.
+>     * From here you can enter the url for the github repo
+>       and hit `<enter>`.
+>     * This will show you a list of the Notebooks available in the repo.
+>     * As each session of the tutorial begins, you will simply select the corresponding notebook from
+>       this list and it will create a copy for you in your Colaboratory account (all `*.ipynb` files in
+>       the Colaboratory account will be stored in your Google Drive).
+>     * To use a TPU, in the notbook the select `Runtime` -> `Change Runtime Type` and you have a
+>       dropbox list of hardward settings to choose from where the notebook can run.
+> 
+>     </details>
+> 
+> 
+> - [ ] 🤗 [Hugging Face](https://huggingface.co): **Account and Access Token**
+> 
+>     <details closed><summary><code>Hugging Face Instructions</code></summary>
+> 
+>     - Sign up for a huggingface account and obtain an access token: https://huggingface.co
+>     - Sign Up (top bar)
+>       Log into huggingface and get an access token:
+>         - Login -> Settings (left panel) -> Access Tokens (left pane) -> New token (center pane)
+> 
+>     </details>
+> 
+> - [ ] 🦙 [Request access](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) to Llama-2 model
+> 
+>     <details closed><summary><code>Llama-2 Access Instructions</code></summary>
+> 
+>     - Visit this https://huggingface.co/meta-llama/Llama-2-7b-hf and request access to the model
+>     - vist meta website and accept the terms https://ai.meta.com/resources/models-and-libraries/llama-downloads/
+>     - Note: Your Hugging Face account email address MUST match the email you provide on the Meta website, or your request will not be approved.
+> 
+>     </details>
+
+
 ## External Resources
 
 - [Generative AI Handbook](https://genai-handbook.github.io/)
