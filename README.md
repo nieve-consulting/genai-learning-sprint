@@ -128,6 +128,7 @@ Building a RAG (Retrieval Augmented Generation) system.
 >     * To use a TPU, in the notbook the select `Runtime` -> `Change Runtime Type` and you have a
 >       dropbox list of hardward settings to choose from where the notebook can run.
 > 
+>     * **Important:** in order to be able to make changes to the notebooks, you need to make a copy of the notebook that will be stored in your Google Drive account. In order to do so, click on the `Copy to Drive` button, located in the main editor bar, next to the `Code` and `Text` buttons.
 >     </details>
 > 
 > 
