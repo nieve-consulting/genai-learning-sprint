@@ -1,8 +1,8 @@
-# GenAI Learning Sprint
+# GenAI Learning Sprint 🏃‍♂️
 
 In this learning sprint, you'll explore the fundamentals of Generative AI and Large Language Models (LLMs). You'll learn how to interact with LLMs, fine-tune them, and evaluate their performance. You'll also explore the risks and challenges associated with generative AI systems and learn how to build and evaluate generative AI systems.
 
-## Outline
+## Outline 📝
 
 By the end of this learning sprint, you'll learn:
 
@@ -60,7 +60,7 @@ By the end of this learning sprint, you'll learn:
 - LLM-as-judge techniques
 - Monitoring, auditing, interpretation, and debugging of LLM outputs
 
-## Labs
+## Labs 🧪
 
 ### Lab 1
 
@@ -158,6 +158,6 @@ Resource Augmented Generation (RAG)
 >     </details>
 
 
-## External Resources
+## External Resources 📚
 
 - [Generative AI Handbook](https://genai-handbook.github.io/)
