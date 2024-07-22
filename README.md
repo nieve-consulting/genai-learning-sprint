@@ -64,31 +64,35 @@ By the end of this learning sprint, you'll learn:
 
 ### Lab 1
 
-Generative AI use cases, project lifecycle, and model pre-training
+Prompt engineering and effective prompt design
 
 #### Lab 1 Learning Objectives
 
-- Discuss model pre-training and the value of continued pre-training vs fine-tuning
-- Define the terms Generative AI, large language models, prompt, and describe the transformer architecture that powers LLMs
-- Describe the steps in a typical LLM-based, generative AI model lifecycle and discuss the constraining factors that drive decisions at each step of model lifecycle
-- Discuss computational challenges during model pre-training and determine how to efficiently reduce memory footprint
-- Define the term scaling law and describe the laws that have been discovered for LLMs related to training dataset size, compute budget, inference requirements, and other factors
+1. Understand the fundamental principles of prompt engineering, including how to craft effective and clear prompts for AI models.
+2. Explore the role of linguistics in prompt engineering, emphasizing the importance of language nuances, grammar, and structure in creating effective prompts.
+3. Learn about various types of prompts, such as discrete prompts, soft prompts, in-context learning, and few-shot learning, and how they influence AI responses.
+4. Gain insights into designing effective prompts by analyzing the characteristics of good versus bad prompts, focusing on clarity, relevance, specificity, and balance.
 
 ### Lab 2
 
-Fine-tuning and evaluating large language models
+Instruction tuning and fine-tuning of LLMs
 
 #### Lab 2 Learning Objectives
 
-- Describe how fine-tuning with instructions using prompt datasets can improve performance on one or more tasks
-- Define catastrophic forgetting and explain techniques that can be used to overcome it
-- Define the term Parameter-efficient Fine Tuning (PEFT)
-- Explain how PEFT decreases computational cost and overcomes catastrophic forgetting
-- Explain how fine-tuning with instructions using prompt datasets can increase LLM performance on one or more tasks
+1. Understand the concept of instruction tuning and its significance in enhancing the performance of language models like LLaMA 2 by training them on input-output instruction pairs.
+2. Learn the process of fine-tuning the LLaMA 2 model using a high-quality instruction dataset, including setting up the training environment, configuring model parameters, and utilizing specialized libraries and tools.
+3. Apply the fine-tuned model to generate text based on specific prompts, demonstrating the model's ability to perform various instruction-driven tasks effectively.
 
 ### Lab 3
 
-Building a RAG (Retrieval Augmented Generation) system.
+Resource Augmented Generation (RAG)
+
+#### Lab 3 Learning Objectives
+
+1. Understand the motivation behind Resource Augmented Generation (RAG) and how it enhances the capabilities of Large Language Models (LLMs) by providing domain-specific context and improving prediction accuracy.
+2. Learn the advantages and disadvantages of RAG, including its ability to reduce hallucinations without increasing model parameters and the potential challenges such as increased latency and the need for data curation.
+3. Gain hands-on experience with implementing RAG, including installing necessary modules, loading and chunking documents, creating embeddings, and setting up a vector database for efficient retrieval.
+4. Explore advanced applications of RAG by integrating it with different frameworks and models, such as Llama 2, Langchain, and ChromaDB, to handle various data types and improve LLM responses.
 
 ## Before You Arrive ✅
 
