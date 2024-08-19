@@ -144,6 +144,9 @@ Resource Augmented Generation (RAG)
 >     - Sign Up (top bar)
 >       Log into huggingface and get an access token:
 >         - Login -> Settings (left panel) -> Access Tokens (left pane) -> New token (center pane)
+>       
+>     * **Important:** choose `Read` when creating the access token, under `Token type`. Make sure to copy the token before leaving the page, as it's only shown once.
+>     * **Important:** you have to add this token as a Google Colab secret in order to securely read from it when working on any of the notebooks of this repo. To do so, in the left sidebar of Google Colab, click on the key-shaped icon, then `Add new secret`, and finally set the secret key as `HF_TOKEN`, and the secret value to the Hugging Face access token you have just created. Then, enable the toggle `Notebook access`. From now on, you can enable this secret to securely authenticate from any other Google Colab instance.
 > 
 >     </details>
 > 
