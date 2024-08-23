@@ -4,7 +4,6 @@ subtitle: "GenAI Learning Sprint"
 author: "Iván Moreno"
 format:
     revealjs:
-        theme: beige
         center-title-slide: true
         scrollable: true
         incremental: true

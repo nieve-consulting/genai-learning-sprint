@@ -1,0 +1,157 @@
+---
+title: "Understanding Generative AI Basics"
+author: "Iván Moreno"
+format:
+    revealjs:
+        center-title-slide: true
+        scrollable: true
+        slide-level: 2
+        smaller: true
+        fig-align: center
+        logo: images/nieve-logo.png
+---
+
+## Overview
+
+- **Understanding Generative AI Basics**
+    - Definition and distinction from traditional AI
+    - Overview of applications: language, audio, image, video
+    - Brief look at key architectures: VAEs, GANs, diffusion models, Transformers
+    - Role of Large Language Models (LLMs) in the GenAI landscape
+
+---
+
+# Defining Generative AI
+
+## What is Generative AI?
+
+![](images/discriminative-generative-models.jpg){width=80%}
+
+- **Generative AI** refers to models that generate new data instances resembling the training data.
+- It **differs from traditional AI**, which generally classifies or predicts based on existing data.
+
+---
+
+### Key Characteristics
+
+![](images/generative-models.png){width=80%}
+
+- **Creativity**: Generates novel outputs.
+- **Probabilistic Models**: Often works with probability distributions to generate diverse outcomes.
+- **Unsupervised or Semi-supervised**: Can learn from unlabelled data.
+
+---
+
+## Distinction from Traditional AI
+
+---
+
+### Traditional AI
+
+![](images/ai-taxonomy.png){width=80%}
+
+- **Focus**: Classification, prediction, optimization.
+- **Examples**: Decision Trees, SVMs, Regression Models.
+- **Tasks**: Recognizing objects, predicting trends, optimizing processes.
+
+---
+
+### Generative AI
+
+![](images/generative-models.png){width=80%}
+
+- **Focus**: Generation of new, original content.
+- **Examples**: GANs, VAEs, Transformers.
+- **Tasks**: Creating realistic images, generating text, synthesizing speech.
+
+---
+
+# Applications of Generative AI
+
+## Overview of Applications
+
+![](images/genai-modalities.png){width=80%}
+
+---
+
+## Overview of Applications
+
+- **Language Generation**
+    - Text completion (GPT models)
+    - Translation, summarization
+- **Audio Generation**
+    - Speech synthesis (Tacotron)
+    - Music composition (Jukedeck)
+- **Image Generation**
+    - Style transfer, inpainting (DALL-E, StyleGAN)
+- **Video Generation**
+    - Frame prediction
+
+---
+
+# Key Architectures in Generative AI
+
+## Variational Autoencoders (VAEs)
+
+![](images/variational-autoencoder.png){width=80%}
+
+- **Core Idea**: Encode input into a latent space, then decode to generate similar data.
+- **Applications**: Image generation, anomaly detection.
+- **Technical Insights**: Utilizes a probabilistic encoder-decoder network, optimizing a lower bound of data likelihood.
+
+## Generative Adversarial Networks (GANs)
+
+![](images/gan.png){width=80%}
+
+- **Core Idea**: Two networks (Generator and Discriminator) compete, leading to realistic data generation.
+- **Applications**: High-resolution image synthesis, video generation.
+- **Technical Insights**: Minimax game between generator and discriminator, leading to the Nash equilibrium.
+
+## Transformers
+
+![](images/transformer-architecture.png){width=80%}
+
+- **Core Idea**: Attention mechanism to model dependencies without regard to sequence length.
+- **Applications**: Text generation, language modeling, image generation (e.g., DALL-E).
+- **Technical Insights**: Scales effectively with data and compute, core to Large Language Models (LLMs).
+
+## Diffusion Models
+
+![](images/generative-models-taxonomy.png){width=80%}
+
+- **Core Idea**: Learn to reverse a diffusion process that gradually destroys data.
+- **Applications**: Denoising, generative tasks in images and audio.
+- **Technical Insights**: Leverage a series of stochastic steps to generate high-fidelity data from noise.
+
+
+---
+
+# Large Language Models (LLMs) in the GenAI Landscape
+
+## Role of LLMs
+
+![](images/transformer-gpt.png){width=80%}
+
+- **Central Role**: LLMs like GPT, BERT, and T5 drive most language-based generative AI tasks.
+- **Capabilities**: Language understanding, generation, translation, summarization, and reasoning.
+- **Transformers**: Enable massive parallelization, key to scaling models like GPT-4.
+
+---
+
+### Technical Considerations for LLMs
+
+![](images/llm-fine-tuning.png){width=80%}
+
+- **Pre-training**: Extensive on diverse text corpora.
+- **Fine-tuning**: Specialized on specific tasks or domains.
+- **Challenges**: Biases, hallucinations, and control.
+
+---
+
+# Conclusion
+
+## Recap
+
+- **Generative AI** is a powerful domain with a broad spectrum of applications.
+- **Key Architectures**: VAEs, GANs, Diffusion Models, and Transformers.
+- **LLMs**: Central to the generative AI ecosystem, powering many advances in natural language processing.
