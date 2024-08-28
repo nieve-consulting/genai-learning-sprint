@@ -66,3 +66,33 @@
 - [ ] ReLU
 - [ ] Softmax
 - [ ] Tanh
+
+**11.** In the context of a neural network, what does backpropagation primarily involve?
+- [ ] Updating the biases of the network
+- [ ] Calculating the output of each layer
+- [ ] Adjusting the weights based on the error gradient
+- [ ] Forwarding the inputs through the network
+
+**12.** What is the purpose of the softmax function in a neural network?
+- [ ] To convert raw scores into probabilities for multi-class classification
+- [ ] To introduce non-linearity into the model
+- [ ] To minimize the loss function
+- [ ] To prevent the vanishing gradient problem
+
+**13.** Which of the following statements is true about Multilayer Perceptrons (MLPs)?
+- [ ] MLPs can only approximate linear functions
+- [ ] MLPs require the use of the Heaviside step function as the activation function
+- [ ] MLPs can model complex, non-linear functions due to their multiple layers
+- [ ] MLPs do not require forward propagation for training
+
+**14.** In the context of neural networks, what does "epoch" refer to?
+- [ ] A single iteration through the entire training dataset during the training process
+- [ ] The number of hidden layers in the neural network
+- [ ] The amount of data processed in one batch
+- [ ] The final output layer of the network
+
+**15.** What is the purpose of using a learning rate in gradient descent optimization?
+- [ ] To determine the number of epochs required for training
+- [ ] To control the step size at each iteration while moving towards a minimum of the loss function
+- [ ] To reduce the training time by skipping some iterations
+- [ ] To adjust the model’s complexity automatically

@@ -78,3 +78,31 @@
 - [ ] Mean Squared Error (MSE)
 - [ ] Precision
 - [ ] R-Squared
+
+**11.** What is a key characteristic of unsupervised learning?
+
+- [ ] It requires labeled data for training.
+- [ ] It uses reward signals to guide learning.
+- [ ] It automatically finds patterns and structure in data.
+- [ ] It predicts future values based on historical data.
+
+**12.** What does the term "regularization" refer to in Machine Learning?
+
+- [ ] A technique used to increase the accuracy of a model on the training data
+- [ ] A method to prevent overfitting by adding a penalty term to the loss function
+- [ ] The process of dividing the dataset into training and test sets
+- [ ] A method to handle missing data in a dataset
+
+**13.** In reinforcement learning, what is the role of the "reward function"?
+
+- [ ] It generates new data points for training.
+- [ ] It evaluates the quality of the predictions made by the model.
+- [ ] It provides feedback to the agent, guiding its learning process.
+- [ ] It measures the accuracy of the model's predictions.
+
+**14.** Which evaluation metric is most appropriate for imbalanced classification problems?
+
+- [ ] F1 Score
+- [ ] Mean Absolute Error (MAE)
+- [ ] R-Squared
+- [ ] Logarithmic Loss (Log Loss)
