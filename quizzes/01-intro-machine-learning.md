@@ -1,9 +1,6 @@
 # Quiz – Introduction to Machine Learning
 
-> 🚦 **Instructions:** Fill out this quiz by marking the correct option. An `x` within the square brackets represents a marked checkbox. For example, `[ ]`. If the question allows multiple answers, select all the correct options.
-
-- Name: *Fill in your name*
-- Email: *Fill in your email address*
+> 🚦 **Instructions:** Fill out this quiz by marking the correct option(s). In order to save your answers, use your browser's `Print to PDF` function. ([Chrome instructions.](https://libguides.rowan.edu/c.php?g=248114&p=4710174))
 
 ---
 
