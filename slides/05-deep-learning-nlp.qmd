@@ -1,0 +1,174 @@
+---
+title: "Deep Learning in NLP"
+author: "Iván Moreno (ivan@nieveconsulting.com)"
+format: 
+  revealjs: 
+    history: true
+    transition: slide
+    incremental: true
+    slide-level: 2
+    slideNumber: true
+    scrollable: true
+    chalkboard: true
+    background-transition: fade
+    slide-number-format: "%current% / %total%"
+    smaller: true
+    margin: 0.1
+    logo: images/nieve-logo.png
+---
+
+## Table of Contents
+1. [Introduction](#introduction)
+2. [NLP Pipeline with Deep Learning](#nlp-pipeline-with-deep-learning)
+3. [Recurrent Neural Networks (RNNs)](#recurrent-neural-networks-rnns)
+4. [Transformers](#transformers)
+
+## Introduction
+- **Deep Learning** has revolutionized Natural Language Processing (NLP) by enabling the development of powerful language models.
+- There are various deep learning models used in NLP, including **Recurrent Neural Networks (RNNs)**, **Convolutional Neural Networks (CNNs)**, and **Transformers**.
+- In this presentation, we will explore the role of deep learning models in NLP, focusing on Transformers and their applications.
+
+## NLP Pipeline with Deep Learning
+
+![](images/traditional-vs-deep-nlp.png){width=80%}
+
+- In contrast to other modeling approaches, deep learning models learn complex patterns and representations *directly from data*.
+- This means that, instead of manually engineering features, deep learning models can **automatically** extract relevant information from text data.
+
+
+## Why Different Architectures?
+- **Traditional neural networks (MLPs)** process *fixed-size inputs*, making them unsuitable for sequential data. They, however, have been used in NLP for **downstream tasks** like text classification by combining a fixed-size representation of text (i.e., computed features), and then feeding it to an MLP.
+- **Convolutional Neural Networks (CNNs)** are effective for image processing but less suited for sequential data. They have been adapted for NLP tasks by treating text as a `1D` sequence.
+- **Recurrent Neural Networks (RNNs)** were *developed to handle sequential data* by maintaining a hidden state that captures context. However, they are prone to vanishing/exploding gradients and slow training due to *sequential processing*.
+- **Transformers** introduced a new architecture that revolutionized NLP by **enabling parallel processing** of tokens and capturing **long-range dependencies**. They are now the foundation of most state-of-the-art language models.
+
+## Recurrent Neural Networks (RNNs)
+
+![](images/rnn-diagram.png)
+
+- Traditional models for sequential data processing.
+- Process *one token at a time*, maintaining a **hidden state** that captures context.
+- Prone to vanishing/exploding gradients and slow training due to sequential processing.
+    - **Long Short-Term Memory (LSTM)** and **Gated Recurrent Unit (GRU)** are variants that address these issues by introducing gating mechanisms.
+    - Gates control the flow of information, allowing the model to learn when to remember or forget information.
+
+## Transformers
+
+![](images/transformer-diagram.png){width=80%}
+
+- **Transformers** are deep learning models designed to handle sequential data, such as natural language.
+- Introduced by *Vaswani et al.* (2017) with the seminal paper *Attention is All You Need*.
+- Process all tokens **in parallel**, allowing for more efficient computation.
+- Self-attention mechanism captures **long-range dependencies**, improving context understanding.
+
+---
+
+### Transformer – Components
+
+![](images/transformer-diagram.png){width=80%}
+
+- The original transformer architecture, designed for machine translation, had *two main components*:
+    1. **Encoder**: Processes the input sequence and generates a representation.
+    2. **Decoder**: Generates the output sequence based on the encoder's representation and the target sequence.
+
+---
+
+### Encoder Architecture
+
+![](images/transformer-encoder.png){width=80%}
+
+- The encoder is right at the *input side* of the transformer.
+- It transforms the input sequence into a *compressed representation* (contextual embeddings).
+- In the original proposed transformer, the encoder was *repeated multiple times* (stacked). This allowed the model to learn complex patterns and dependencies in the input sequence, with each layer processing the input at a **different level of abstraction**, capturing both *local and global* information.
+
+---
+
+![](images/transformer-encoder.png){width=80%}
+
+- Each encoder layer consists of three sub-layers:
+    1. **Multi-Head Self-Attention Mechanism**: Allows the model to focus on different parts of the input simultaneously.
+    2. **Layer Normalization**: Normalizes the output of each sub-layer. This helps stabilize the training process.
+    3. **Feedforward Neural Networks**: Process information from the attention layer.
+
+---
+
+### Decoder Architecture
+
+![](images/transformer-decoder.png){width=80%}
+
+- *Almost identical* to the encoder, but with an *additional sub-layer* that performs multi-head attention over the encoder's output.
+- The goal of the decoder is to generate the output sequence **token by token**, attending to the encoder's output and the previously generated tokens.
+-  In order to prevent the decoder from peeking at future tokens, the <u>self-attention mechanism in the decoder is masked</u>, only allowing the model to attend to tokens that have already been generated.
+
+---
+
+### The Attention Function
+
+![](images/attention-example.png){width=80%}
+
+- Attention measures the *similarity between two vectors* and returns the weighted similarity scores.
+- The attention function takes three inputs: **Query (Q)**, **Key (K)**, and **Value (V)** vectors.
+
+---
+
+![](images/attention-example.png){width=80%}
+
+- Intuitively, query, key and values are terms commonly used in information retrieval systems.
+    - **Query**: The search term (input) used to retrieve information.
+    - **Key**: The index or identifiers of the documents in the database.
+    - **Value**: All the information contained in a database.
+    - **A search engine would use the query to find the most relevant documents (values) based on the keys.**
+
+---
+
+:::{.callout-note}
+## Self-Attention vs Cross-Attention
+Depending on the origin of the query, key, and value vectors, attention mechanisms can be classified into self-attention and cross-attention.
+
+- **Self-Attention**: The query, key, and value vectors are derived from the **same input sequence**.
+- **Cross-Attention**: The query vector is derived from one input sequence, while the key and value vectors are derived from **another** input sequence.
+- In the transformer architecture, *self-attention* is used to capture dependencies within the input sequence, while *cross-attention* is used to relate the input and output sequences in the decoder.
+:::
+
+---
+
+### Mathematical Formulation
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+$$
+
+- The attention function computes the weighted sum of the values ($V$) based on the similarity between the query ($Q$) and key ($K$) vectors.
+- The $softmax$ function normalizes the similarity scores, ensuring that the weights sum to 1.
+- The scaling factor $\sqrt{d_k}$ is used to prevent the dot product of $Q$ and $K$ from becoming too large, which can lead to gradients vanishing during training.
+    - This could happen when $d_k$ is large, as the dot product grows with the dimensionality of the vectors.
+- The output of the attention function is the *weighted sum of the values*, which is then passed through a feedforward neural network.
+
+---
+
+:::{.callout-tip}
+## Parallel Processing
+Transformer parallelization is *enabled* by the attention function.
+
+Provided that both $Q$, $K$, and $V$ are matrices, the attention function can be computed by **two matrix multiplications**.
+:::
+
+---
+
+### Multi-Head Attention
+
+![](images/multi-head-attention.png){width=80%}
+
+- Multi-head attention allows the model to *jointly attend to information from different representation subspaces at different positions*.
+- Each head computes the attention function **in parallel**, using different learned linear projections of the query, key, and value vectors.
+- The outputs of the multiple heads are **concatenated** and linearly transformed to produce the final output.
+
+---
+
+### Positional Encoding
+
+![](images/positional-encoding.png){width=80%}
+
+- **Transformers do not inherently understand the order of tokens in a sequence**, as they process tokens in parallel.
+- Positional encoding is added to the input embeddings to provide information about the token's position in the sequence.
+- Different positional encoding schemes can be used, such as $sin$ and $cos$ functions.

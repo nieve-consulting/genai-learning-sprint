@@ -1,32 +1,38 @@
 ---
 title: "Introduction to Neural Networks"
-author: "Iván Moreno"
-format:
-    revealjs:
-        center-title-slide: true
-        scrollable: true
-        incremental: true
-        slide-level: 2
-        smaller: true
-        fig-align: center
-        logo: images/nieve-logo.png
+author: "Iván Moreno (ivan@nieveconsulting.com)"
+format: 
+  revealjs: 
+    history: true
+    transition: slide
+    incremental: true
+    slide-level: 2
+    slideNumber: true
+    scrollable: true
+    chalkboard: true
+    background-transition: fade
+    slide-number-format: "%current% / %total%"
+    smaller: true
+    margin: 0.1
+    logo: images/nieve-logo.png
 ---
 
-# Overview
-
-1. What is a Neural Network?
-2. Perceptrons and Multilayer Perceptrons
-3. Forward Propagation
-4. Backpropagation and Gradient Descent
-5. Activation Functions
+## Table of Contents
+1. [What is a Neural Network?](#what-is-a-neural-network)
+2. [Perceptrons](#perceptrons)
+3. [Multilayer Perceptrons (MLPs)](#multilayer-perceptrons-mlps)
+4. [Forward Propagation](#forward-propagation)
+5. [Backpropagation](#backpropagation)
+6. [Activation Functions](#activation-functions)
+7. [Conclusion](#conclusion)
 
 ## What is a Neural Network?
 
 ![](images/neural-network-diagram.png){width=80%}
 
-- A neural network is a computational model inspired by the way biological neural networks in the human brain process information.
-- Composed of layers of interconnected nodes or neurons.
-- Neurons in a neural network are organized into an input layer, hidden layers, and an output layer.
+- A neural network is a computational model **inspired** by the way biological neural networks in the human brain process information.
+- Composed of layers of *interconnected nodes* or **neurons**.
+- Neurons in a neural network are organized into an *input layer, hidden layers, and an output layer*.
 
 ---
 
@@ -40,8 +46,8 @@ format:
 
 ![](images/perceptron.png){width=80%}
 
-- The simplest form of a neural network is the perceptron.
-- A perceptron models a single neuron with multiple inputs and one output (binary classification).
+- The simplest form of a neural network is the **perceptron**.
+- A perceptron *models a single neuron* with multiple inputs and one output (binary classification).
 - It takes a weighted sum of inputs, adds a bias, and applies an activation function.
 
 ---
@@ -124,8 +130,8 @@ $$w \cdot x = w_1 x_1 + w_2 x_2 + \ldots + w_n x_n$$
 ![](images/neural-network-diagram.png){width=80%}
 
 - **Multilayer Perceptrons (MLPs)** are a type of neural network with one or more hidden layers.
-- Each layer is fully connected to the next.
-- MLPs can approximate any continuous function given enough neurons and layers (universal approximation theorem), making them powerful function approximators.
+- Each layer is **fully connected** to the next.
+- MLPs can approximate any continuous function given enough neurons and layers (*universal approximation theorem*), making them powerful function approximators.
 
 
 ---
@@ -298,9 +304,9 @@ $$\tanh(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}$$
 
 ::: {.callout-note}
 ## What does it mean for data to be zero-centered?
-Zero-centered data has a mean of 0, which can help with convergence during training, especially when using gradient-based optimization methods. 
+*Zero-centered data has a mean of 0*, which can help with convergence during training, especially when using gradient-based optimization methods. 
 
-In non-zero-centered data, the gradients can be biased in a particular direction, leading to slower convergence. Think of it as if every step you take is always leaning towards one side.
+In non-zero-centered data, the gradients can be biased in a particular direction, leading to **slower convergence**. Think of it as if every step you take is always leaning towards one side.
 :::
 
 ---

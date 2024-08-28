@@ -1,16 +1,20 @@
 ---
 title: "Machine Learning Fundamentals"
-subtitle: "GenAI Learning Sprint"
-author: "Iván Moreno"
-format:
-    revealjs:
-        center-title-slide: true
-        scrollable: true
-        incremental: true
-        slide-level: 2
-        smaller: true
-        fig-align: center
-        logo: images/nieve-logo.png
+author: "Iván Moreno (ivan@nieveconsulting.com)"
+format: 
+  revealjs: 
+    history: true
+    transition: slide
+    incremental: true
+    slide-level: 2
+    slideNumber: true
+    scrollable: true
+    chalkboard: true
+    background-transition: fade
+    slide-number-format: "%current% / %total%"
+    smaller: true
+    margin: 0.1
+    logo: images/nieve-logo.png
 ---
 
 ## What is Machine Learning?
@@ -138,16 +142,27 @@ Choose based on the problem context—discriminative models for classification a
 ### Evaluation Metrics
 
 - Depending on the problem type, different metrics are used:
-  - **Classification:** Accuracy, Precision, Recall, F1-Score, ROC-AUC.
-  - **Regression:** Mean Squared Error (MSE), Mean Absolute Error (MAE), R-Squared.
+  - **Classification:** *Accuracy*, *Precision*, *Recall*, *F1-Score*, *ROC-AUC*.
+  - **Regression:** *Mean Squared Error (MSE)*, *Mean Absolute Error (MAE)*, *R-Squared*.
 
 ---
 
-### Cross-Validation
+### Evaluation Techniques
 
-- **Purpose:** Estimate model performance on unseen data.
-- **Why?** Prevent overfitting and assess generalization capabilities.
-- **Techniques:** K-Fold Cross-Validation, Stratified Cross-Validation.
+![](images/evaluation-techniques.png){fig-align="center" width=80%}
+
+- In order to assess model performance on unseen data, there are several techniques.
+
+- **Holdout Method:** Split data into training and test sets.
+   - Common split ratios: 70/30, 80/20, 90/10.
+   - Disadvantage: Sensitive to the random split. Not all data is used for training.
+- **Cross-Validation:** Split data into training and validation sets multiple times.
+   - Common types: k-Fold, Stratified k-Fold, Leave-One-Out.
+   - All data is used for training and validation. Reduces variance in performance estimates.
+   - Disadvantage: Computationally expensive.
+- **Bootstrapping:** Repeatedly sample the dataset with replacement, creating multiple "new" datasets.
+   - Useful for estimating the uncertainty of a model's performance.
+   - Disadvantage: Computationally expensive. Possible bias in resampling.
 
 ---
 
@@ -164,33 +179,3 @@ Represents the tradeoff between model complexity and generalization.
 ## Goal
 Find the right balance to minimize error on unseen data.
 :::
-
-## Industry Use Case: Classification Exercise
-
----
-
-### Scenario
-- A financial institution needs to detect fraudulent transactions.
-
----
-
-### Steps
-
-1. **Data Preprocessing:** Cleaning and transforming transaction data.
-2. **Model Selection:** Evaluate Logistic Regression, Random Forests, and XGBoost.
-3. **Model Training:** Split data into training and test sets. Train models.
-4. **Evaluation:** Compare performance using `ROC-AUC` and precision-recall metrics.
-5. **Interpretation:** Analyze feature importance for insights.
-
-## Conclusion and Next Steps
-
-**Summary:**
-
-- Machine learning bridges data and intelligent systems.
-- Discriminative and generative models have different strengths.
-- Diverse learning paradigms cater to various problem types.
-- Deep learning pushes boundaries in AI capabilities.
-
-## Q&A
-
-- Open floor for questions and discussion.

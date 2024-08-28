@@ -1,25 +1,27 @@
 ---
 title: "Understanding Generative AI Basics"
-author: "Iván Moreno"
-format:
-    revealjs:
-        center-title-slide: true
-        scrollable: true
-        slide-level: 2
-        smaller: true
-        fig-align: center
-        logo: images/nieve-logo.png
+author: "Iván Moreno (ivan@nieveconsulting.com)"
+format: 
+  revealjs: 
+    history: true
+    transition: slide
+    incremental: true
+    slide-level: 2
+    slideNumber: true
+    scrollable: true
+    chalkboard: true
+    background-transition: fade
+    slide-number-format: "%current% / %total%"
+    smaller: true
+    margin: 0.1
+    logo: images/nieve-logo.png
 ---
 
-## Overview
-
-- **Understanding Generative AI Basics**
-    - Definition and distinction from traditional AI
-    - Overview of applications: language, audio, image, video
-    - Brief look at key architectures: VAEs, GANs, diffusion models, Transformers
-    - Role of Large Language Models (LLMs) in the GenAI landscape
-
----
+## Table of Contents
+2. [Defining Generative AI](#defining-generative-ai)
+3. [Applications of Generative AI](#applications-of-generative-ai)
+4. [Key Architectures in Generative AI](#key-architectures-in-generative-ai)
+5. [Large Language Models (LLMs) in the GenAI Landscape](#large-language-models-llms-in-the-genai-landscape)
 
 # Defining Generative AI
 
@@ -145,13 +147,3 @@ format:
 - **Pre-training**: Extensive on diverse text corpora.
 - **Fine-tuning**: Specialized on specific tasks or domains.
 - **Challenges**: Biases, hallucinations, and control.
-
----
-
-# Conclusion
-
-## Recap
-
-- **Generative AI** is a powerful domain with a broad spectrum of applications.
-- **Key Architectures**: VAEs, GANs, Diffusion Models, and Transformers.
-- **LLMs**: Central to the generative AI ecosystem, powering many advances in natural language processing.
