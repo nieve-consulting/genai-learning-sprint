@@ -163,4 +163,41 @@ Resource Augmented Generation (RAG)
 
 ## External Resources 📚
 
+### Blogs 📝
+
+- [Sebastian Raschka's Blog](https://sebastianraschka.com/blog/)
+- [Chip Huyen's Blog](https://huyenchip.com/)
+- [Lil'Log](https://lilianweng.github.io/
+)
+- [To Data and Beyond](https://youssefh.substack.com/)
+- [Eugene Yan's Blog](https://eugeneyan.com/writing/)
+- [Jay Alammar's Blog](https://jalammar.github.io/)
+- [Phil Schmid's Blog](https://www.philschmid.de/)
+- [Jason Liu's Blog](https://jxnl.co/writing/)
+- [Simon Willison’s Weblog](https://simonwillison.net/)
+
+### Articles 📰
+
+- [The Transformer Blueprint](https://deeprevision.github.io/posts/001-transformer/)
+- [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/)
+- [The Illustrated GPT-2](http://jalammar.github.io/illustrated-gpt2/)
+- [The Illustrated BERT](http://jalammar.github.io/illustrated-bert/)
+- [Decoding Strategies in Large Language Models](https://mlabonne.github.io/blog/posts/2023-06-07-Decoding_strategies.html)
+
+### Videos 📺
+
+- [3Blue1Brown's Neural Networks Series](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+- [Let's Build GPT: from scratch, in code, spelled out (Andrej Karpaty)](https://www.youtube.com/watch?v=kCc8FmEb1nY)
+
+### Courses 🎓
+
+- [Prompt Engineering Guide](https://www.promptingguide.ai/)
+
+### Books 📖
+
 - [Generative AI Handbook](https://genai-handbook.github.io/)
+- [Build a Large Language Model, by Sebastian Raschka](https://www.manning.com/books/build-a-large-language-model-from-scratch)
+
+### Links 🔗
+
+- [Awesome-LLM](https://github.com/Hannibal046/Awesome-LLM)
