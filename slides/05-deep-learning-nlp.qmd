@@ -22,6 +22,7 @@ format:
 2. [NLP Pipeline with Deep Learning](#nlp-pipeline-with-deep-learning)
 3. [Recurrent Neural Networks (RNNs)](#recurrent-neural-networks-rnns)
 4. [Transformers](#transformers)
+5. [Training of Large Language Models](#training-of-large-language-models)
 
 ## Introduction
 - **Deep Learning** has revolutionized Natural Language Processing (NLP) by enabling the development of powerful language models.
@@ -58,8 +59,9 @@ format:
 
 - **Transformers** are deep learning models designed to handle sequential data, such as natural language.
 - Introduced by *Vaswani et al.* (2017) with the seminal paper *Attention is All You Need*.
+    - Initially developed for machine translation, have since become the foundation of most state-of-the-art language models.
 - Process all tokens **in parallel**, allowing for more efficient computation.
-- Self-attention mechanism captures **long-range dependencies**, improving context understanding.
+- **Attention** mechanism captures **long-range dependencies**, improving context understanding.
 
 ---
 
@@ -68,7 +70,7 @@ format:
 ![](images/transformer-diagram.png){width=80%}
 
 - The original transformer architecture, designed for machine translation, had *two main components*:
-    1. **Encoder**: Processes the input sequence and generates a representation.
+    1. **Encoder**: Processes the input sequence and generates a compressed representation.
     2. **Decoder**: Generates the output sequence based on the encoder's representation and the target sequence.
 
 ---
@@ -88,7 +90,13 @@ format:
 - Each encoder layer consists of three sub-layers:
     1. **Multi-Head Self-Attention Mechanism**: Allows the model to focus on different parts of the input simultaneously.
     2. **Layer Normalization**: Normalizes the output of each sub-layer. This helps stabilize the training process.
-    3. **Feedforward Neural Networks**: Process information from the attention layer.
+    3. **Feedforward (MLP)**: Processes information from the attention layer (feature expansion). Further processes and transforms the embeddings.
+
+
+:::{.callout-note}
+## What is layer normalization?
+Layer normalization is a technique used to normalize the activations of a neural network layer. This is done in order to prevent the **"internal covariate shift"** problem, which can slow down training and make it difficult to converge. Layer normalization normalizes the activations of each layer across the feature dimension, ensuring that the mean and variance of the activations are consistent across training examples.
+:::
 
 ---
 
@@ -165,10 +173,87 @@ Provided that both $Q$, $K$, and $V$ are matrices, the attention function can be
 
 ---
 
+### Visualization of Multi-Head Attention
+
+- `exBERT` is a visualization tool that allows you to explore the *attention patterns learned by transformer models*.
+- It shows **how different heads attend to different parts** of the input sequence, providing insights into the model's decision-making process.
+- Available at [exBERT](https://huggingface.co/spaces/exbert-project/exbert).
+
+---
+
 ### Positional Encoding
 
-![](images/positional-encoding.png){width=80%}
+![](images/positional-encoding.png){width=50%}
 
 - **Transformers do not inherently understand the order of tokens in a sequence**, as they process tokens in parallel.
 - Positional encoding is added to the input embeddings to provide information about the token's position in the sequence.
 - Different positional encoding schemes can be used, such as $sin$ and $cos$ functions.
+
+---
+
+### Transformer Variants
+
+- **Encoder-Decoder Transformers**: Consist of an encoder and a decoder. It's the original transformer architecture used for machine translation.
+- **Encoder-Only Transformers**: Used for tasks where the input and output sequences are of the same length, such as text classification.
+    - When talking about same-length sequences, it means that the model processes each token independently and does not generate an output sequence.
+- **Decoder-Only Transformers**: Used for tasks where the output sequence is generated token by token, such as text generation.
+
+---
+
+:::{.callout-note}
+## How can decoder-only transformers follow instructions?
+- In an encoder-decoder transformer, the input is first encoded into a fixed-size representation by the encoder (context vector), which is then used by the decoder to generate the output sequence.
+- In a decoder-only transformer, the model generates the output sequence token by token, attending to the encoder's output and the previously generated tokens.
+
+The self-attention mechanism within the decoder allows each token to attend to all previous tokens, including the instruction. This means that when generating a response, the model can effectively use the instruction as part of its context.
+:::
+
+---
+
+### Which Transformer Variant to Use?
+
+- **Encoder-Decoder Transformers**: Natural language understanding tasks like machine translation, summarization, and question answering.
+- **Encoder-Only Transformers**: Text classification, sentiment analysis, and named entity recognition.
+- **Decoder-Only Transformers**: Language modeling, text generation, and dialog systems.
+
+---
+
+## Training of Large Language Models
+
+![](images/masked-language-modeling.png){width=80%}
+
+- LLMs are typically trained on large-scale datasets, in a **self-supervised** manner. This means that the model learns from the input data itself, without requiring explicit labels.
+- Depending on the model variant, different training objectives can be used:
+    - **Next Token Prediction**: The model is trained to predict the next token in the input sequence.
+    - **Masked Language Modeling (MLM)**: The model is trained to predict masked tokens in the input sequence.
+    - **Next Sentence Prediction (NSP)**: The model is trained to predict whether two input sentences are consecutive or not.
+
+---
+
+### Transfer Learning with Pretrained Models
+
+![](images/transfer-learning.png){width=80%}
+
+- Pretrained language models, such as **BERT**, **GPT-2**, and **RoBERTa**, have been trained on large-scale datasets and are available for transfer learning.
+- Transfer learning involves **fine-tuning** the pretrained model on a specific downstream task, such as text classification or named entity recognition.
+- By leveraging the knowledge learned during pretraining, transfer learning allows the model to achieve good performance on the downstream task with **less data** and **training time**.
+
+---
+
+### Fine-Tuning of Pretrained Models
+
+![](images/fine-tuning-transformer.png){width=80%}
+
+- Pretrained language models can be **fine-tuned** on downstream tasks by adding a task-specific head to the model.
+- The pretrained weights are **frozen** during fine-tuning, and only the weights of the task-specific head are updated.
+- Fine-tuning allows the model to adapt to the specific characteristics of the downstream task, improving performance.
+
+---
+
+### Instruction Tuning
+
+![](images/instruction-tuning-llm.png){width=80%}
+
+- A common challenge in NLP is **instruction following**, where the model is required to generate a sequence of actions based on a set of instructions.
+- Pretrained transformers can be fine-tuned on instruction-following tasks by providing the instructions as input and training the model to generate the corresponding actions.
+- The self-attention mechanism in transformers allows the model to capture dependencies between the instructions and the generated actions, enabling effective instruction following.
