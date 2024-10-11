@@ -1,0 +1,130 @@
+---
+title: "Retrospective"
+author: "Iván Moreno (ivan@nieveconsulting.com)"
+format: 
+  revealjs: 
+    history: true
+    transition: slide
+    slide-level: 2
+    slideNumber: true
+    scrollable: true
+    chalkboard: true
+    background-transition: fade
+    slide-number-format: "%current% / %total%"
+    smaller: true
+    margin: 0.1
+    logo: images/nieve-logo.png
+filters:
+  - produnis/timer
+---
+
+## Format
+
+- For each of the sessions
+    - **10 minutes** to review the materials covered in the session
+    - Write down *1-2* topics that you think you have **learned well**
+    - Write down *1-2* topics that you **found interesting** to continue learning
+    - In breakout rooms, **discuss 1 topic** of your choice with your partner
+
+
+## Block 1
+
+- **Machine Learning Fundamentals**
+    - What is Machine Learning?
+    - Machine Learning Pipeline
+    - Discriminative vs. Generative Models
+    - Learning Paradigms (Supervised, Unsupervised, RL)
+    - Evaluating Machine Learning Models
+    - Bias-Variance Tradeoff
+- **Introduction to Neural Networks**
+    - Perceptrons
+    - Feedforward Neural Networks
+    - Backpropagation
+    - Activation Functions
+
+## Block 1 - Materials Review
+
+Review the materials covered in **Block 1**.
+
+- write down *1-2* topics that you think you have **learned well**
+- and *1-2* topics that you **found interesting** to continue learning.
+
+:::{.timer #block-1-review seconds=600 starton=interaction}
+:::
+
+## Block 1 - Discussion
+
+In breakout rooms, discuss *1 topic* of your choice with your partner.
+
+:::{.timer #block-1-discussion seconds=600 starton=interaction}
+:::
+
+## Block 2
+
+- **Introduction to NLP**
+    - NLP Tasks
+    - Understanding Text Data
+    - NLP Pipeline
+    - Text Preprocessing
+    - Modeling Approaches
+- **Deep Learning for NLP**
+    - NLP Pipeline with Deep Learning
+    - Transformers
+    - Training of LLMs
+
+## Block 2 - Materials Review
+
+Review the materials covered in **Block 2**.
+
+- write down *1-2* topics that you think you have **learned well**
+- and *1-2* topics that you **found interesting** to continue learning.
+
+:::{.timer #block-2-review seconds=600 starton=interaction}
+:::
+
+## Block 2 - Discussion
+
+In breakout rooms, discuss *1 topic* of your choice with your partner.
+
+:::{.timer #block-2-discussion seconds=600 starton=interaction}
+:::
+
+## Block 3
+
+- **Interacting with LLMs**
+    - Text Generation Process
+    - Prompt Engineering
+    - Libraries for Interacting with LLMs
+- **Enterprise Patterns for LLMs**
+    - Fine-tuning Techniques
+    - Alignment Techniques
+    - Quantization
+    - Retrieval-Augmented Generation (RAG)
+    - LLM Agents & Agentic Systems
+    - LLM Evaluation
+
+## Block 3 - Materials Review
+
+Review the materials covered in **Block 1**.
+
+- write down *1-2* topics that you think you have **learned well**
+- and *1-2* topics that you **found interesting** to continue learning.
+
+:::{.timer #block-3-review seconds=600 starton=interaction}
+:::
+
+## Block 3 - Discussion
+
+In breakout rooms, discuss *1 topic* of your choice with your partner.
+
+:::{.timer #block-3-discussion seconds=600 starton=interaction}
+:::
+
+## Feedback Form
+
+Please take a moment to fill out the feedback form for this session. Your feedback is very important, and will help me improve the content and delivery of the course! 🛠️🙏
+
+[https://forms.gle/Mi8FvNbzJFbEoKek6](https://forms.gle/Mi8FvNbzJFbEoKek6)
+
+:::{.timer #form seconds=600 starton=interaction}
+:::
